@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - Program entry point which determines either greater than 5, is less than 6, or is 0
+ * main - Determines either greater than 5, is less than 6, or is 0
  *
- * Always returns 0 on success. Error code otherwise
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
