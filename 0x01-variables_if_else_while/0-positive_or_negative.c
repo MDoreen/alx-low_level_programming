@@ -4,7 +4,7 @@
 /* more headers goes there */
 
 /**
-* main - entry point which determinesif a numbr is positive, negative or zero
+* main - entry point which determines if a number is positive, negative or zero
 *
 * Return: Always 0 (if success)
 */
