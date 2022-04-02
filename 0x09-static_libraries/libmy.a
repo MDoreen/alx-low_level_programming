@@ -1,0 +1,4 @@
+gcc -c *c
+ar -rcs libmy.a *.o
+ar -t libmy.a
+nm libmy.a
