@@ -14,7 +14,6 @@
  * Description: singly linked list node structure
  *
  */
-
 typedef struct listint_s
 {
 	int n;
@@ -28,7 +27,6 @@ typedef struct listint_s
  *
  * Description: singly linked list of pointers
  */
-
 typedef struct listp_s
 {
 	void *p;
