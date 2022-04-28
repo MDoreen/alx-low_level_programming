@@ -1,55 +1,31 @@
 #include "main.h"
-
 /**
- * binary_to_uint - converts binary to unsigned int
- * @b: string of '1' and '0'
+ * binary_to_uint -  converts a binary number to an unsigned int
+ * @b: pointer to a string of 0 and 1 chars
  *
- * Return: unsigned int or 0
+ * Return: the converted number, or 0 if there is one or more chars
+ * in the string b that is not 0 or 1
+ * b is NULL
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int k = 1, len;
-	unsigned int deci = 0;
-	int i;
+	unsigned int dec = 0, i = 0, uint = 0, len;
 
-	if (b == NULL)
+	if (b == NULL || b[0] == '\0')
 		return (0);
 
-	len = _strlen(b);
-	if (len < 0)
-		return (0);
-
-	for (i = (len - 1); i >= 0; i--)
+	for (len = 0; b[len] != '\0'; len++)
 	{
-		if (b[i] != '1' && b[i] != '0')
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
-
-		if (b[i] == '1')
-			deci += k;
-
-		k *= 2;
 	}
+	len = len - 1;
 
-	return (deci);
-}
-
-/**
- * _strlen - gets the length of a string
- * @b: string
- *
- * Return: length of string or 0
- */
-unsigned int _strlen(const char *b)
-{
-	unsigned int i = 0;
-
-	if (b == NULL)
-		return (-1);
-
-	while (b[i] != '\0')
+	while (i <= len)
 	{
+		dec = (b[i] - '0') << (len - i);
+		uint = dec + uint;
 		i++;
 	}
-
-	return (i);
+	return (uint);
 }
