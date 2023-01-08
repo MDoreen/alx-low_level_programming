@@ -1,3 +1,1 @@
-C - Hash tables
-
-It aims to learn how to implement Hash Tables with C language.
+# A README file for C - Hash_Tables
