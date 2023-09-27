@@ -1,4 +1,4 @@
-#include "variadic_functions.h"
+i#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -65,8 +65,6 @@ void print_string(va_list arg)
         }
 
         printf("%s", str);
-}
-
 }
 
 /**
