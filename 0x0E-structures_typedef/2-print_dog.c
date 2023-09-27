@@ -1,27 +1,32 @@
 #include "dog.h"
 #include <stdio.h>
-#include <stdlib.h>
 
-/**
- * print_dog - Prints a struct dog.
- * @d: The struct dog to be printed.
- */
-void print_dog(struct dog *d)
-{
-        if (d == NULL)
-                return;
+// Define the struct 'dog'
+struct dog {
+    char name[50];
+    int age;
+    char breed[50];
+};
 
-        if (d->name == NULL)
-                printf("Name: (nil)\n");
-        else
-                printf("Name: %s\n", d->name);
+// Function to print a 'dog' struct
+void printDog(struct dog myDog) {
+    printf("Name: %s\n", myDog.name);
+    printf("Age: %d\n", myDog.age);
+    printf("Breed: %s\n", myDog.breed);
+}
 
-        if (d->age < 0)
-                printf("Age: (nil)\n");
-        else
-                printf("Age: %f\n", d->age)
+int main() {
+    // Create an instance of the 'dog' struct
+    struct dog myPet;
 
-        if (d->owner == NULL)
-                printf("Owner: (nil)\n");
-        else
-                printf("Owner: %s\n", d->owner);;
+    // Assign values to the struct members
+    strcpy(myPet.name, "Buddy");
+    myPet.age = 3;
+    strcpy(myPet.breed, "Golden Retriever");
+
+    // Call the 'printDog' function to print the 'myPet' struct
+    printf("My Pet:\n");
+    printDog(myPet);
+
+    return 0;
+}
